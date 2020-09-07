@@ -46,6 +46,7 @@ const Row = (props) => {
 			setTrailerUrl("");
 			console.log("trailerUrl", trailerUrl);
 		} else {
+			//? Use movie name or title to search a trailer
 			movieTrailer(movie?.name || movie?.title, {
 				id: true,
 				// year: movie.first_air_date

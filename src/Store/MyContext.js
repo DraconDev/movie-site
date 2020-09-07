@@ -1,8 +1,6 @@
 import { createContext } from "react";
 
-// const [value, setValue] = useState({ test: "this" });
 
-// const MyContext = createContext([value, setValue]);
-const MyContext = createContext(["value", "setValue"]);
+const MyContext = createContext(null);
 
 export default MyContext;
