@@ -1,5 +1,5 @@
 import movieTrailer from "movie-trailer";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import YouTube from "react-youtube";
 import apiConfig from "../../Api/Axios/apiConfig";
 import classes from "./Row.module.css";
@@ -7,6 +7,7 @@ import classes from "./Row.module.css";
 const base_url = "https://image.tmdb.org/t/p/original/";
 
 const Row = (props) => {
+	console.log("props", props);
 	const [movies, setMovies] = useState([]);
 	const [trailerUrl, setTrailerUrl] = useState("");
 
@@ -33,6 +34,11 @@ const Row = (props) => {
 			autoplay: 1,
 		},
 	};
+
+	const titleClass =
+		title.trim().replace(/\s/g, "").charAt(0).toLowerCase() +
+		title.trim().replace(/\s/g, "").slice(1);
+	console.log("titleClass", titleClass);
 
 	const handleClick = (movie) => {
 		console.log("movie", movie);
@@ -64,8 +70,10 @@ const Row = (props) => {
 		}
 	};
 
+	// const eval(titleClass)  = useRef(titleClass);
+
 	return (
-		<div className={classes.row}>
+		<div className={`${classes.row} ${titleClass}Row`}>
 			<h2>{title}</h2>
 
 			<div className={`${classes.row_posters}`}>

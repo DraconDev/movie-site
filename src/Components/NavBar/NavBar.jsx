@@ -21,9 +21,20 @@ const NavBar = () => {
 		document.documentElement.scrollTop = 0;
 	};
 
+	const netflixScroll = () => {
+		let test = document.getElementsByClassName("netflixOriginalsRow");
+		console.log("test", test);
+		test.scrollIntoView();
+	};
+
 	return (
 		<div className={`${classes.nav} ${show && classes.nav_black}`}>
-			<img src={logo} alt="logo" className={classes.nav_logo} />
+			<img
+				src={logo}
+				alt="logo"
+				className={classes.nav_logo}
+				onClick={() => topFunction()}
+			/>
 			<img
 				src="https://cdn-images-1.medium.com/max/1200/1*vIR7iO-1GnY2xYxL6NiYkw.png"
 				alt="logo"

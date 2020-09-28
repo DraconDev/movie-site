@@ -3,8 +3,8 @@ import requests from "../../Api/Requests/requests";
 import Row from "../Row/Row";
 
 export const contentList = {
-	Trending: { isLarge: true },
-	NetflixOriginals: { isLarge: false },
+	NetflixOriginals: { isLarge: true },
+	Trending: { isLarge: false },
 	TopRated: { isLarge: false },
 	ActionMovies: { isLarge: false },
 	ComedyMovies: { isLarge: false },

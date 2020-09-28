@@ -15,6 +15,10 @@
 	display: none;
 }
 
+.titleClass {
+	background-color: #f00;
+}
+
 .row_poster:hover {
 	transform: scale(1.08);
 }
